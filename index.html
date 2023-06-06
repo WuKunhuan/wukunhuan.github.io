@@ -2,13 +2,88 @@
 
 <html>
 
+<!-- Head Information-->
 <head>
+
+    <meta charset="utf-8">
+
+    <!-- Tab Setting -->
     <link rel="icon" href="assets/images/doctorial_hat.png" type="image/x-icon">
-    <title>Wu Kunhuan - Github</title>
+    <title>Wu Kunhuan</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+    <link rel="stylesheet" href="assets/stylesheets/sidebar.css">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <h1>This is a title ...</h1>
+
+<div id="container-window">
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+
+        <!-- Sidebar's header -->
+        <header>Wu Kunhuan</header>
+
+        <ul id="sidebar_list">
+
+            <li>
+                <p>Profile</p>
+            </li>
+
+            <li>
+                <p>Knowledge</p>
+            </li>
+
+            <li>
+                <p>ChatBot</p>
+            </li>
+
+            <li>
+                <p>Support</p>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+    <!-- Main Section -->
+    <div id="main">
+
+        <div id="chatbot-input-space"> <!-- position: absolute -->
+            
+            <div id="chatbot-input">
+
+                <!-- Message Input -->
+                <textarea type="text" id="chatbot-input-box" placeholder="Send a message to Kunhuan ..." 
+                rows="1" oninput="autoResizeChatbotInput()" style="resize: none; overflow-y: hidden;"></textarea>
+            
+                <!-- Send Button -->
+                <button id="chatbot-input-button">
+                    <i id="chatbot-input-button-icon" class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+
+            </div>
+            
+
+            <!-- Information -->
+            <p style="padding: 12px 6px 6px 6px; color: #666666; text-align: center;">The design is inspired by <a href="https://chat.openai.com/">ChatGPT API</a></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/scripts/default_script.js"></script> <!-- Default behaviours -->
+<script src="assets/scripts/chatbot.js"></script> <!-- Chatbot Page behaviours -->
+
 </body>
 
 </html>
