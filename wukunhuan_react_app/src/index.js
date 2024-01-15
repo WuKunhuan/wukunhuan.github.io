@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+class NavigationBar extends React.Component {
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    constructor(props) {
+        super(props); 
+        this.setState({
+            tabs: props.tabs
+        })
+    }
+
+    render() {
+        return (
+
+<div>
+    <a href="https://wukunhuan.github.io/">
+        <img    src="assets/images/favicon_wukunhuan_knowledge.png"
+                alt="cannot display"
+                style= {{float: 'left', width: 200, height: 'auto', marginTop: 10, marginLeft: 10, marginRight: 10}}
+                
+        />
+    </a>
+</div>
+
+        ); 
+    }
+
+}
+
+let navbar = ReactDOM.createRoot(document.getElementById('navigation-bar')); 
+navbar.render(<NavigationBar tabs=""/>)
